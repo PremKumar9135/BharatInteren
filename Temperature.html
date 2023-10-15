@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <Title>Temperature converter</Title>
+    <link rel="stylesheet" href="temperature.css">
+<head>
+    <title>Temperature Converter</title>
+    <script>
+        function convert() {
+            var celsius = parseFloat(document.getElementById("celsius").value);
+            var fahrenheit = (celsius * 9/5) + 32;
+            document.getElementById("result").innerHTML = celsius + " &deg;C = " + fahrenheit.toFixed(2) + " &deg;F";
+        }
+    </script>
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+    <p>Enter temperature in Celsius:</p>
+    <input type="number" id="celsius" placeholder="Celsius" oninput="convert()">
+    <p id="result"></p>
+</body>
+</html>
